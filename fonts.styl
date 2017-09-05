@@ -1,0 +1,16 @@
+// 縦書
+vertical-write()
+    writing-mode tb-rl
+    -webkit-writing-mode vertical-rl
+    -webkit-text-orientation upright
+
+// 文字省略
+line-clamp(count=1)
+    overflow hidden
+    text-overflow ellipsis
+    if count > 1
+        display -webkit-box
+        -webkit-box-orient vertical
+        -webkit-line-clamp $count
+    else
+        white-space nowrap
