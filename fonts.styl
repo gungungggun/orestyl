@@ -5,9 +5,11 @@ vertical-write()
   -webkit-text-orientation upright
 
 // 文字省略
-line-clamp(count=1)
+line-clamp(count=1, line-height=1.5)
   overflow hidden
   text-overflow ellipsis
+  line-height line-height
+  min-height line-height * count
   if count > 1
     display -webkit-box
     -webkit-box-orient vertical
